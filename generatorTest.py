@@ -1,5 +1,6 @@
 from random import randint
-
+import time
+start_time = time.time()
 #Lengh of words
 lengthWords = 8
 
@@ -13,11 +14,13 @@ uc_letters = {0:"A",1:"B",2:"C",3:"D",4:"E",5:"F",6:"G",7:"H",8:"I",9:"J",10:"K"
 numbers = {0:"0",1:"1",2:"2",3:"3",4:"4",5:"5",6:"6",7:"7",8:"8",9:"9"}
 
 #File dictionary
-file = open("dictest.txt","w")
+file = open("../Dictionnaire/dic.txt","w")
 
 #Dictionary tmp LC
 tmpDicLC = []
 
+#Maximum of words to generate
+maxWords = 100000000
 
 #Get random number between min and max
 def getRandomNumber(min,max):
@@ -34,10 +37,19 @@ def generateLCRandomWord():
         cursor = cursor+1
     return word
 
+#Generate all lower case words with max words
+def loadAllLCRandomWord():
+    cursor = 0
+    while cursor < maxWords:
+        word = generateLCRandomWord()        
+        tmpDicLC.append(word)        
+        cursor = cursor+1
 
-print generateLCRandomWord()
+
 
 #Write in file
-# for i in tmpDicLC:
-#     file.writelines(i+'\n')
-# file.close()
+loadAllLCRandomWord()
+for i in tmpDicLC:
+    file.writelines(i+'\n')
+file.close()
+print("--- %s seconds ---" % (time.time() - start_time))
