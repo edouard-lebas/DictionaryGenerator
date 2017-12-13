@@ -13,23 +13,48 @@ numbers = ["1","2","3","4","5","6","7","8","9"]
 #File dictionary
 file = open("dictest.txt","w")
 
+#Dictionary tmp
+tmpDic = []
+
 #All posibilities lower case
 #DONE : 
-    #25 a-z * len (aaaaaaaa,bbbbbbbb)
-tempDic = []
-word = ""
-stop = 0
-for l in lc_letters:
-    print l
-    while stop < lengthWords:
-        word = ''.join([word, l])
-        stop = stop + 1
-    tempDic.append(word)
+    #26 a-z * len (aaaaaaaa,bbbbbbbb)
+    #26 A-Z * len (aaaaaaaa,bbbbbbbb)
+
+
+#26 a-z * len (aaaaaaaa,bbbbbbbb)
+def lc26az():
     word = ""
     stop = 0
+    for l in lc_letters:
+        while stop < lengthWords:
+            word = ''.join([word, l])
+            stop = stop + 1
+        print word
+        tmpDic.append(word)
+        word = ""
+        stop = 0
 
+#26 A-Z * len (AAAAAAAA,BBBBBBBB)
+def uc26AZ():
+    word = ""
+    stop = 0
+    for l in uc_letters:
+        while stop < lengthWords:
+            word = ''.join([word, l])
+            stop = stop + 1
+        print word
+        tmpDic.append(word)
+        word = ""
+        stop = 0
 
+#Load all def
+def loadAll():
+    lc26az()
+    uc26AZ()
 
 #Write in file
-for i in tempDic:
+loadAll()
+for i in tmpDic:
     file.writelines(i+'\n')
+file.close()
