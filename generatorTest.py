@@ -1,3 +1,5 @@
+from random import randint
+
 #Lengh of words
 lengthWords = 8
 
@@ -13,48 +15,29 @@ numbers = {0:"0",1:"1",2:"2",3:"3",4:"4",5:"5",6:"6",7:"7",8:"8",9:"9"}
 #File dictionary
 file = open("dictest.txt","w")
 
-#Dictionary tmp
-tmpDic = []
-
-#All posibilities lower case
-#DONE : 
-    #26 a-z * len (aaaaaaaa,bbbbbbbb)
-    #26 A-Z * len (aaaaaaaa,bbbbbbbb)
+#Dictionary tmp LC
+tmpDicLC = []
 
 
-#Basic generation of 25 words lower case between a-z
-#Ex : aaaaaaaa, bbbbbbbb
-def lcBasicaz():
+#Get random number between min and max
+def getRandomNumber(min,max):
+    return randint(min,max)
+
+#Generate random lower case word with length
+def generateLCRandomWord():
+    cursor = 0
     word = ""
-    stop = 0
-    for l in lc_letters:
-        while stop < lengthWords:
-            word = ''.join([word, lc_letters[l]])
-            stop = stop + 1
-        tmpDic.append(word)
-        word = ""
-        stop = 0
+    while cursor < lengthWords:
+        rnd = getRandomNumber(0,25)
+        letter = lc_letters[rnd]
+        word = ''.join([word, letter])
+        cursor = cursor+1
+    return word
 
-#Basic generation of 25 words upper case between A-Z
-#Ex : AAAAAAAA, BBBBBBBB
-def ucBasicAZ():
-    word = ""
-    stop = 0
-    for l in uc_letters:
-        while stop < lengthWords:
-            word = ''.join([word, uc_letters[l]])
-            stop = stop + 1
-        tmpDic.append(word)
-        word = ""
-        stop = 0
 
-#Load all def
-def loadAll():
-    lcBasicaz()
-    ucBasicAZ()
+print generateLCRandomWord()
 
 #Write in file
-loadAll()
-for i in tmpDic:
-    file.writelines(i+'\n')
-file.close()
+# for i in tmpDicLC:
+#     file.writelines(i+'\n')
+# file.close()
