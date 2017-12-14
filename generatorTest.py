@@ -1,5 +1,4 @@
 from random import randint
-import time
 #Lengh of words
 lengthWords = 8
 
@@ -295,15 +294,9 @@ def loadAllAllMixedRandomWord():
 
 ##./ALLMIXED
 
-
-#Time start
-start_time = 0
-
 def run():
     global typeCharNumber
-    global start_time
     global exploit
-    start_time = time.time()
     while exploit == 0:
         displayMenu()
     #LC
@@ -346,11 +339,9 @@ def run():
         loadAllNUMRandomWord()
     else:
         print "Error"
-
-
+    
 run()
 #Write in file
 for i in tmpDic:
     file.writelines(i+'\n')
 file.close()
-print("--- %s seconds ---" % (time.time() - start_time))
