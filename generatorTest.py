@@ -1,6 +1,5 @@
 from random import randint
 import time
-start_time = time.time()
 #Lengh of words
 lengthWords = 8
 
@@ -41,6 +40,8 @@ exploit = 0
 
 #convert number enter by user to string
 def typeCharNumberToString():
+    global typeCharNumber
+    global typeCharString
     if typeCharNumber == 1:
         typeCharString = "lc_letters"
     elif typeCharNumber == 2:        
@@ -68,13 +69,16 @@ def typeCharNumberToString():
 
 #Display principal menu
 def displayMenu():
-    typeCharNumberToString()
+    global lengthWords
+    global typeCharString
+    global maxWords
     print "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*"
     print "* 1 > Chose word length : ",lengthWords
     print "* 2 > Chose type of char in word: ",typeCharString
     print "* 3 > Chose number of words : ",maxWords
     print "* 4 > RUN"
     print "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*"
+    displayChoices()
 
 #Display menu for type of dictionary
 def displayAllCaseMenu():
@@ -94,21 +98,21 @@ def displayAllCaseMenu():
 
 #Display all choices to user
 def displayChoices():
+    global lengthWords
+    global typeCharNumber
+    global maxWords
+    global exploit
     response = int(raw_input("Choice : "))
     if response == 1:
         lengthWords = int(raw_input("Word length : "))
-        print lengthWords
     elif response == 2:
         displayAllCaseMenu()
         typeCharNumber = int(raw_input("Choice : "))
         typeCharNumberToString()
-        print typeCharNumber
-        print typeCharString
     elif response == 3:
-        maxWords == int(raw_input("Number of words : "))
-        print maxWords
+        maxWords = int(raw_input("Number of words : "))
     elif response == 4:
-        run = 1
+        exploit = 1
     else:
         print "Error"
        
@@ -154,12 +158,16 @@ def loadAllUCRandomWord():
         tmpDicUC.append(word)        
         cursor = cursor+1
 
-
+#Time start
+start_time = 0
 
 def run():
+    global start_time
+    global exploit
     while exploit == 0:
         displayMenu()
-        displayChoices()
+    print "RUN"
+    start_time = time.time()
 
 run()
 #Write in file
