@@ -21,6 +21,8 @@ lcnum_letters = {0:"a",1:"b",2:"0",3:"c",4:"d",5:"1",6:"e",7:"f",8:"2",9:"g",10:
 #All upper case and num letters
 ucnum_letters = {0:"A",1:"B",2:"0",3:"C",4:"D",5:"1",6:"E",7:"F",8:"2",9:"G",10:"H",11:"3",12:"I",13:"J",14:"4",15:"K",16:"L",17:"5",18:"M",19:"N",20:"6",21:"O",22:"P",23:"7",24:"Q",25:"R",26:"8",27:"S",28:"T",29:"9",30:"U",31:"V",32:"W",33:"X",34:"Y",35:"Z"}
 
+#All upper case and num letters
+allmixed_letters = {0:"A",1:"B",2:"0",3:"C",4:"D",5:"1",6:"E",7:"F",8:"2",9:"G",10:"H",11:"3",12:"I",13:"J",14:"4",15:"K",16:"L",17:"5",18:"M",19:"N",20:"6",21:"O",22:"P",23:"7",24:"Q",25:"R",26:"8",27:"S",28:"T",29:"9",30:"U",31:"V",32:"W",33:"X",34:"Y",35:"Z",36:"a",37:"b",38:"0",39:"c",40:"d",41:"1",42:"e",43:"f",44:"2",45:"g",46:"h",47:"3",48:"i",49:"j",50:"4",51:"k",52:"l",53:"5",54:"m",55:"n",56:"6",57:"o",58:"p",59:"7",60:"q",61:"r",62:"8",63:"s",64:"t",65:"9",66:"u",67:"v",68:"w",69:"x",70:"y",71:"z"}
 
 
 #File dictionary
@@ -270,6 +272,30 @@ def loadAllUCNUMRandomWord():
 
 ##./UCNUM
 
+##ALLMIXED
+
+#Generate random number word with length
+def generateAllMixedRandomWord():
+    cursor = 0
+    word = ""
+    while cursor < lengthWords:
+        rnd = getRandomNumber(0,71)
+        letter = allmixed_letters[rnd]
+        word = ''.join([word, letter])
+        cursor = cursor+1
+    return word
+
+#Generate all number words with max words
+def loadAllAllMixedRandomWord():
+    cursor = 0
+    while cursor < maxWords:
+        word = generateAllMixedRandomWord()        
+        tmpDic.append(word)        
+        cursor = cursor+1
+
+##./ALLMIXED
+
+
 #Time start
 start_time = 0
 
@@ -277,6 +303,7 @@ def run():
     global typeCharNumber
     global start_time
     global exploit
+    start_time = time.time()
     while exploit == 0:
         displayMenu()
     #LC
@@ -309,6 +336,9 @@ def run():
     elif typeCharNumber == 9:
         loadAllUCRandomWord()
         loadAllNUMRandomWord()
+    #UCNUM
+    elif typeCharNumber == 10:
+        loadAllAllMixedRandomWord()
     #ALL
     elif typeCharNumber == 11:
         loadAllUCRandomWord()
@@ -316,7 +346,6 @@ def run():
         loadAllNUMRandomWord()
     else:
         print "Error"
-    start_time = time.time()
 
 
 run()
