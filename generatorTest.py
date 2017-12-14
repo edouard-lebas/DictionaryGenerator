@@ -309,6 +309,11 @@ def run():
     elif typeCharNumber == 9:
         loadAllUCRandomWord()
         loadAllNUMRandomWord()
+    #ALL
+    elif typeCharNumber == 11:
+        loadAllUCRandomWord()
+        loadAllLCRandomWord()
+        loadAllNUMRandomWord()
     else:
         print "Error"
     start_time = time.time()
