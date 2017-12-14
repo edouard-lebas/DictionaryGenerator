@@ -25,6 +25,17 @@ tmpDicUC = []
 #Maximum of words to generate
 maxWords = 100
 
+#Type of char in word (1 = lc_letters, 2 = uc_letters, 3 = numbers, 4=lc_letters+uc_letters, 5 = lc_letters+numbers, 6 = uc_letters+numbers, 7 = ALL)
+typeChar = 7
+
+def displayMenu():
+    print "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*"
+    print "* 1 > Chose word length : ",lengthWords
+    print "* 2 > Chose type of char in word: ",typeChar
+    print "* 3 > Chose number of words : ",maxWords
+    print "* 4 > RUN"
+    print "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*"
+
 #Get random number between min and max
 def getRandomNumber(min,max):
     return randint(min,max)
