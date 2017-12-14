@@ -15,11 +15,8 @@ numbers = {0:"0",1:"1",2:"2",3:"3",4:"4",5:"5",6:"6",7:"7",8:"8",9:"9"}
 #File dictionary
 file = open("dic.txt","w")
 
-#Dictionary tmp LC
-tmpDicLC = []
-
-#Dictionary tmp UC
-tmpDicUC = []
+#Dictionary tmp
+tmpDic = []
 
 #Maximum of words to generate
 maxWords = 100
@@ -38,7 +35,9 @@ typeCharString = "lc_letters+uc_letters";
 #exploit = 1 == RUN
 exploit = 0
 
-#convert number enter by user to string
+##MENU
+
+#Convert number enter by user to string
 def typeCharNumberToString():
     global typeCharNumber
     global typeCharString
@@ -115,10 +114,14 @@ def displayChoices():
         exploit = 1
     else:
         print "Error"
-       
+
+##./MENU
+
 #Get random number between min and max
 def getRandomNumber(min,max):
     return randint(min,max)
+
+##LC
 
 #Generate random lower case word with length
 def generateLCRandomWord():
@@ -136,8 +139,12 @@ def loadAllLCRandomWord():
     cursor = 0
     while cursor < maxWords:
         word = generateLCRandomWord()        
-        tmpDicLC.append(word)        
+        tmpDic.append(word)        
         cursor = cursor+1
+
+##./LC
+
+##UC
 
 #Generate random upper case word with length
 def generateUCRandomWord():
@@ -155,27 +162,72 @@ def loadAllUCRandomWord():
     cursor = 0
     while cursor < maxWords:
         word = generateUCRandomWord()        
-        tmpDicUC.append(word)        
+        tmpDic.append(word)        
         cursor = cursor+1
+
+#./UC
+
+##NUM
+
+#Generate random number word with length
+def generateNUMRandomWord():
+    cursor = 0
+    word = ""
+    while cursor < lengthWords:
+        rnd = getRandomNumber(0,9)
+        letter = numbers[rnd]
+        word = ''.join([word, letter])
+        cursor = cursor+1
+    return word
+
+#Generate all number words with max words
+def loadAllNUMRandomWord():
+    cursor = 0
+    while cursor < maxWords:
+        word = generateNUMRandomWord()        
+        tmpDic.append(word)        
+        cursor = cursor+1
+
+##./NUM
 
 #Time start
 start_time = 0
 
 def run():
+    global typeCharNumber
     global start_time
     global exploit
     while exploit == 0:
         displayMenu()
-    print "RUN"
+    #LC
+    if typeCharNumber == 1:
+        loadAllLCRandomWord()
+    #UC
+    elif typeCharNumber == 2:
+        loadAllUCRandomWord()
+    #NUM
+    elif typeCharNumber == 3:
+        loadAllNUMRandomWord()
+    #UCLC
+    elif typeCharNumber == 7:
+        loadAllLCRandomWord()
+        loadAllUCRandomWord()
+    #LCNUM
+    elif typeCharNumber == 8:
+        loadAllLCRandomWord()
+        loadAllNUMRandomWord()
+    #UCNUM
+    elif typeCharNumber == 9:
+        loadAllUCRandomWord()
+        loadAllNUMRandomWord()
+    else:
+        print "Error"
     start_time = time.time()
+
 
 run()
 #Write in file
-# loadAllLCRandomWord()
-# loadAllUCRandomWord()
-# for i in tmpDicLC:
-#     file.writelines(i+'\n')
-# for i in tmpDicUC:
-#     file.writelines(i+'\n')
+for i in tmpDic:
+    file.writelines(i+'\n')
 file.close()
 print("--- %s seconds ---" % (time.time() - start_time))
