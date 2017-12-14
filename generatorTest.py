@@ -18,6 +18,10 @@ uclc_letters = {0:"a",1:"A",2:"b",3:"B",4:"c",5:"C",6:"d",7:"D",8:"e",9:"E",10:"
 #All lower case and num letters
 lcnum_letters = {0:"a",1:"b",2:"0",3:"c",4:"d",5:"1",6:"e",7:"f",8:"2",9:"g",10:"h",11:"3",12:"i",13:"j",14:"4",15:"k",16:"l",17:"5",18:"m",19:"n",20:"6",21:"o",22:"p",23:"7",24:"q",25:"r",26:"8",27:"s",28:"t",29:"9",30:"u",31:"v",32:"w",33:"x",34:"y",35:"z"}
 
+#All upper case and num letters
+ucnum_letters = {0:"A",1:"B",2:"0",3:"C",4:"D",5:"1",6:"E",7:"F",8:"2",9:"G",10:"H",11:"3",12:"I",13:"J",14:"4",15:"K",16:"L",17:"5",18:"M",19:"N",20:"6",21:"O",22:"P",23:"7",24:"Q",25:"R",26:"8",27:"S",28:"T",29:"9",30:"U",31:"V",32:"W",33:"X",34:"Y",35:"Z"}
+
+
 
 #File dictionary
 file = open("dic.txt","w")
@@ -220,7 +224,7 @@ def loadAllLCUCRandomWord():
 
 ##./LCUC
 
-##LCUC
+##LCNUM
 
 #Generate random number word with length
 def generateLCNUMRandomWord():
@@ -241,7 +245,30 @@ def loadAllLCNUMRandomWord():
         tmpDic.append(word)        
         cursor = cursor+1
 
-##./LCUC
+##./LCNUM
+
+##UCNUM
+
+#Generate random number word with length
+def generateUCNUMRandomWord():
+    cursor = 0
+    word = ""
+    while cursor < lengthWords:
+        rnd = getRandomNumber(0,35)
+        letter = ucnum_letters[rnd]
+        word = ''.join([word, letter])
+        cursor = cursor+1
+    return word
+
+#Generate all number words with max words
+def loadAllUCNUMRandomWord():
+    cursor = 0
+    while cursor < maxWords:
+        word = generateUCNUMRandomWord()        
+        tmpDic.append(word)        
+        cursor = cursor+1
+
+##./UCNUM
 
 #Time start
 start_time = 0
@@ -267,6 +294,9 @@ def run():
     #LCNUMMIXED
     elif typeCharNumber == 5:
         loadAllLCNUMRandomWord()
+    #UCNUMMIXED
+    elif typeCharNumber == 6:
+        loadAllUCNUMRandomWord()
     #UCLC
     elif typeCharNumber == 7:
         loadAllLCRandomWord()
