@@ -25,17 +25,93 @@ tmpDicUC = []
 #Maximum of words to generate
 maxWords = 100
 
-#Type of char in word (1 = lc_letters, 2 = uc_letters, 3 = numbers, 4=lc_letters+uc_letters, 5 = lc_letters+numbers, 6 = uc_letters+numbers, 7 = ALL)
-typeChar = 7
+#Type of char in word in int(
+# 1 = lc_letters, 2 = uc_letters, 3 = numbers,
+# 4 = lc_letters+uc_letters Mixed, 5 = lc_letters+numbers Mixed, 6 = uc_letters+numbers Mixed,
+# 7 = lc_letters+uc_letters, 8 = lc_letters+numbers, 9 = uc_letters+numbers,
+# 10 = All Mixed, 11= All
+# )
+typeCharNumber = 7
 
+#Type of char in word in string
+typeCharString = "lc_letters+uc_letters";
+
+#exploit = 1 == RUN
+exploit = 0
+
+#convert number enter by user to string
+def typeCharNumberToString():
+    if typeCharNumber == 1:
+        typeCharString = "lc_letters"
+    elif typeCharNumber == 2:        
+        typeCharString = "uc_letters"
+    elif typeCharNumber == 3:        
+        typeCharString = "numbers"
+    elif typeCharNumber == 4:        
+        typeCharString = "lc_letters+uc_letters MIXED"
+    elif typeCharNumber == 5:        
+        typeCharString = "lc_letters+numbers MIXED"
+    elif typeCharNumber == 6:        
+        typeCharString = "lc_letters+numbers MIXED"
+    elif typeCharNumber == 7:        
+        typeCharString = "lc_letters+uc_letters"
+    elif typeCharNumber == 8:        
+        typeCharString = "lc_letters+numbers"
+    elif typeCharNumber == 9:        
+        typeCharString = "lc_letters+numbers"
+    elif typeCharNumber == 10:        
+        typeCharString = "All MIXED"
+    elif typeCharNumber == 11:        
+        typeCharString = "All"
+    else:
+        print "Error"
+
+#Display principal menu
 def displayMenu():
+    typeCharNumberToString()
     print "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*"
     print "* 1 > Chose word length : ",lengthWords
-    print "* 2 > Chose type of char in word: ",typeChar
+    print "* 2 > Chose type of char in word: ",typeCharString
     print "* 3 > Chose number of words : ",maxWords
     print "* 4 > RUN"
     print "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*"
 
+#Display menu for type of dictionary
+def displayAllCaseMenu():
+    print "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*"
+    print "* 1 > lc_letters"
+    print "* 2 > uc_letters"
+    print "* 3 > numbers"
+    print "* 4 > lc_letters+uc_letters Mixed"
+    print "* 5 > lc_letters+numbers Mixed"
+    print "* 6 > uc_letters+numbers Mixed"
+    print "* 7 > lc_letters+uc_letters"
+    print "* 8 > lc_letters+numbers"
+    print "* 9 > uc_letters+numbers"
+    print "* 10 > All Mixed"
+    print "* 11 > All"
+    print "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*"
+
+#Display all choices to user
+def displayChoices():
+    response = int(raw_input("Choice : "))
+    if response == 1:
+        lengthWords = int(raw_input("Word length : "))
+        print lengthWords
+    elif response == 2:
+        displayAllCaseMenu()
+        typeCharNumber = int(raw_input("Choice : "))
+        typeCharNumberToString()
+        print typeCharNumber
+        print typeCharString
+    elif response == 3:
+        maxWords == int(raw_input("Number of words : "))
+        print maxWords
+    elif response == 4:
+        run = 1
+    else:
+        print "Error"
+       
 #Get random number between min and max
 def getRandomNumber(min,max):
     return randint(min,max)
@@ -78,12 +154,20 @@ def loadAllUCRandomWord():
         tmpDicUC.append(word)        
         cursor = cursor+1
 
+
+
+def run():
+    while exploit == 0:
+        displayMenu()
+        displayChoices()
+
+run()
 #Write in file
-loadAllLCRandomWord()
-loadAllUCRandomWord()
-for i in tmpDicLC:
-    file.writelines(i+'\n')
-for i in tmpDicUC:
-    file.writelines(i+'\n')
+# loadAllLCRandomWord()
+# loadAllUCRandomWord()
+# for i in tmpDicLC:
+#     file.writelines(i+'\n')
+# for i in tmpDicUC:
+#     file.writelines(i+'\n')
 file.close()
 print("--- %s seconds ---" % (time.time() - start_time))
