@@ -64,13 +64,13 @@ def typeCharNumberToString():
     elif typeCharNumber == 5:        
         typeCharString = "lc_letters+numbers MIXED"
     elif typeCharNumber == 6:        
-        typeCharString = "lc_letters+numbers MIXED"
+        typeCharString = "uc_letters+numbers MIXED"
     elif typeCharNumber == 7:        
         typeCharString = "lc_letters+uc_letters"
     elif typeCharNumber == 8:        
         typeCharString = "lc_letters+numbers"
     elif typeCharNumber == 9:        
-        typeCharString = "lc_letters+numbers"
+        typeCharString = "uc_letters+numbers"
     elif typeCharNumber == 10:        
         typeCharString = "All MIXED"
     elif typeCharNumber == 11:        
