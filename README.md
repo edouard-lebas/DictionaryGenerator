@@ -12,10 +12,15 @@ For example, a password or a WPA2 disctionary.
 Require python 2.7.X
 
 apt-get update
+
 apt-get upgrade
 
+
 git clone https://github.com/edouard-lebas/DictionaryGenerator.git
+
 cd DictionaryGenerator
+
 chmod 755 dictionaryGenerator.py
+
 python dictionaryGenerator.py
 
