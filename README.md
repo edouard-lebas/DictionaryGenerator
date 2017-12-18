@@ -5,7 +5,7 @@
 
 With this script we can generate dictionaries of all sizes and characters.
 
-For example, a password or a WPA2 disctionary.
+For example, a password or a WPA2 dictionary.
 
 ### Usage & Requirement
 
