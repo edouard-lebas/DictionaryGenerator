@@ -296,52 +296,55 @@ def loadAllAllMixedRandomWord():
 def run():
     global typeCharNumber
     global exploit
-    while exploit == 0:
-        displayMenu()
-    #LC
-    if typeCharNumber == 1:
-        loadAllLCRandomWord()
-    #UC
-    elif typeCharNumber == 2:
-        loadAllUCRandomWord()
-    #NUM
-    elif typeCharNumber == 3:
-        loadAllNUMRandomWord()
-    #UCLCMIXED
-    elif typeCharNumber == 4:
-        loadAllLCUCRandomWord()
-    #LCNUMMIXED
-    elif typeCharNumber == 5:
-        loadAllLCNUMRandomWord()
-    #UCNUMMIXED
-    elif typeCharNumber == 6:
-        loadAllUCNUMRandomWord()
-    #UCLC
-    elif typeCharNumber == 7:
-        loadAllLCRandomWord()
-        loadAllUCRandomWord()
-    #LCNUM
-    elif typeCharNumber == 8:
-        loadAllLCRandomWord()
-        loadAllNUMRandomWord()
-    #UCNUM
-    elif typeCharNumber == 9:
-        loadAllUCRandomWord()
-        loadAllNUMRandomWord()
-    #UCNUM
-    elif typeCharNumber == 10:
-        loadAllAllMixedRandomWord()
-    #ALL
-    elif typeCharNumber == 11:
-        loadAllUCRandomWord()
-        loadAllLCRandomWord()
-        loadAllNUMRandomWord()
-    else:
-        print "Error"
+    try:
+        while exploit == 0:
+            displayMenu()
+        #LC
+        if typeCharNumber == 1:
+            loadAllLCRandomWord()
+        #UC
+        elif typeCharNumber == 2:
+            loadAllUCRandomWord()
+        #NUM
+        elif typeCharNumber == 3:
+            loadAllNUMRandomWord()
+        #UCLCMIXED
+        elif typeCharNumber == 4:
+            loadAllLCUCRandomWord()
+        #LCNUMMIXED
+        elif typeCharNumber == 5:
+            loadAllLCNUMRandomWord()
+        #UCNUMMIXED
+        elif typeCharNumber == 6:
+            loadAllUCNUMRandomWord()
+        #UCLC
+        elif typeCharNumber == 7:
+            loadAllLCRandomWord()
+            loadAllUCRandomWord()
+        #LCNUM
+        elif typeCharNumber == 8:
+            loadAllLCRandomWord()
+            loadAllNUMRandomWord()
+        #UCNUM
+        elif typeCharNumber == 9:
+            loadAllUCRandomWord()
+            loadAllNUMRandomWord()
+        #UCNUM
+        elif typeCharNumber == 10:
+            loadAllAllMixedRandomWord()
+        #ALL
+        elif typeCharNumber == 11:
+            loadAllUCRandomWord()
+            loadAllLCRandomWord()
+            loadAllNUMRandomWord()
+        else:
+            print "Error"
+    except KeyboardInterrupt, e:
+        print "KeyboardInterrupt > ", e
     
 run()
 #File dictionary
-filename = "dic-"+typeCharString+"-"+str(lengthWords)
+filename = "dic-"+typeCharString+"-"+str(lengthWords)+".txt"
 file = open(filename,"w")
 
 #Write in file
