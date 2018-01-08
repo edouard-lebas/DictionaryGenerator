@@ -150,6 +150,8 @@ def loadAllLCRandomWord():
         if word not in tmpDic:     
             tmpDic.append(word) 
             cursor = cursor+1
+        else:
+            print "IN > ",word
 
 ##./LC
 
@@ -340,7 +342,7 @@ def run():
 run()
 #File dictionary
 filename = "dic-"+typeCharString+"-"+str(lengthWords)
-file = open("dic.txt","w")
+file = open(filename,"w")
 
 #Write in file
 for i in tmpDic:
