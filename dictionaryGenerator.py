@@ -173,8 +173,11 @@ def loadAllUCRandomWord():
     cursor = 0
     while cursor < maxWords:
         word = generateUCRandomWord()        
-        tmpDic.append(word)        
-        cursor = cursor+1
+        if word not in tmpDic:     
+            tmpDic.append(word) 
+            cursor = cursor+1
+        else:
+            print "IN > ",word
 
 #./UC
 
@@ -196,8 +199,11 @@ def loadAllNUMRandomWord():
     cursor = 0
     while cursor < maxWords:
         word = generateNUMRandomWord()        
-        tmpDic.append(word)        
-        cursor = cursor+1
+        if word not in tmpDic:     
+            tmpDic.append(word) 
+            cursor = cursor+1
+        else:
+            print "IN > ",word
 
 ##./NUM
 
@@ -219,8 +225,11 @@ def loadAllLCUCRandomWord():
     cursor = 0
     while cursor < maxWords:
         word = generateLCUCRandomWord()        
-        tmpDic.append(word)        
-        cursor = cursor+1
+        if word not in tmpDic:     
+            tmpDic.append(word) 
+            cursor = cursor+1
+        else:
+            print "IN > ",word
 
 ##./LCUC
 
@@ -242,8 +251,11 @@ def loadAllLCNUMRandomWord():
     cursor = 0
     while cursor < maxWords:
         word = generateLCNUMRandomWord()        
-        tmpDic.append(word)        
-        cursor = cursor+1
+        if word not in tmpDic:     
+            tmpDic.append(word) 
+            cursor = cursor+1
+        else:
+            print "IN > ",word
 
 ##./LCNUM
 
@@ -265,8 +277,11 @@ def loadAllUCNUMRandomWord():
     cursor = 0
     while cursor < maxWords:
         word = generateUCNUMRandomWord()        
-        tmpDic.append(word)        
-        cursor = cursor+1
+        if word not in tmpDic:     
+            tmpDic.append(word) 
+            cursor = cursor+1
+        else:
+            print "IN > ",word
 
 ##./UCNUM
 
@@ -288,8 +303,11 @@ def loadAllAllMixedRandomWord():
     cursor = 0
     while cursor < maxWords:
         word = generateAllMixedRandomWord()        
-        tmpDic.append(word)        
-        cursor = cursor+1
+        if word not in tmpDic:     
+            tmpDic.append(word) 
+            cursor = cursor+1
+        else:
+            print "IN > ",word
 
 ##./ALLMIXED
 
