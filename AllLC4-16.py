@@ -30,7 +30,7 @@ elif lenght == "5":
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "6":
-    file = open("DIC_lcletters_7","w")
+    file = open("DIC_lcletters_6","w")
     try:
         for a in lc_letters:
             for b in lc_letters:
