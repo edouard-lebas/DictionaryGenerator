@@ -12,8 +12,9 @@ if lenght == "4":
                 for c in lc_letters:
                     for d in lc_letters:
                         word = a+b+c+d
-                        file.write(word)
+                        file.write(word+"\n")
         print "DONE"
+        file.close()
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "5":
@@ -25,8 +26,9 @@ elif lenght == "5":
                     for d in lc_letters:
                         for e in lc_letters:
                             word = a+b+c+d+e
-                            file.write(word)
+                            file.write(word+"\n")
         print "DONE"
+        file.close()
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "6":
@@ -39,8 +41,9 @@ elif lenght == "6":
                         for e in lc_letters:
                             for f in lc_letters:
                                 word = a+b+c+d+e+f
-                                file.write(word)
+                                file.write(word+"\n")
         print "DONE"
+        file.close()
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "7":
@@ -54,8 +57,9 @@ elif lenght == "7":
                             for f in lc_letters:
                                 for g in lc_letters:
                                     word = a+b+c+d+e+f+g
-                                    file.write(word)
+                                    file.write(word+"\n")
         print "DONE"
+        file.close()
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "8":
@@ -70,8 +74,9 @@ elif lenght == "8":
                                 for g in lc_letters:
                                     for h in lc_letters:
                                         word = a+b+c+d+e+f+g+h
-                                        file.write(word)
+                                        file.write(word+"\n")
         print "DONE"
+        file.close()
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "9":
@@ -87,8 +92,9 @@ elif lenght == "9":
                                     for h in lc_letters:
                                         for i in lc_letters:
                                             word = a+b+c+d+e+f+g+h+i
-                                            file.write(word)
+                                            file.write(word+"\n")
         print "DONE"
+        file.close()
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "10":
@@ -105,8 +111,9 @@ elif lenght == "10":
                                         for i in lc_letters:
                                             for j in lc_letters:
                                                 word = a+b+c+d+e+f+g+h+i+j
-                                                file.write(word)
+                                                file.write(word+"\n")
         print "DONE"
+        file.close()
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "11":
@@ -124,8 +131,9 @@ elif lenght == "11":
                                             for j in lc_letters:
                                                 for k in lc_letters:
                                                     word = a+b+c+d+e+f+g+h+i+j+k
-                                                    file.write(word)
+                                                    file.write(word+"\n")
         print "DONE"
+        file.close()
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "12":
@@ -144,8 +152,9 @@ elif lenght == "12":
                                                 for k in lc_letters:
                                                     for l in lc_letters:
                                                         word = a+b+c+d+e+f+g+h+i+j+k+l
-                                                        file.write(word)
+                                                        file.write(word+"\n")
         print "DONE"
+        file.close()
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "13":
@@ -165,8 +174,9 @@ elif lenght == "13":
                                                     for l in lc_letters:
                                                         for m in lc_letters:
                                                             word = a+b+c+d+e+f+g+h+i+j+k+l+m
-                                                            file.write(word)
+                                                            file.write(word+"\n")
         print "DONE"
+        file.close()
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "14":
@@ -187,8 +197,9 @@ elif lenght == "14":
                                                         for m in lc_letters:
                                                             for n in lc_letters:
                                                                 word = a+b+c+d+e+f+g+h+i+j+k+l+m+n
-                                                                file.write(word)
+                                                                file.write(word+"\n")
         print "DONE"
+        file.close()
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "15":
@@ -210,8 +221,9 @@ elif lenght == "15":
                                                             for n in lc_letters:
                                                                 for o in lc_letters:
                                                                     word = a+b+c+d+e+f+g+h+i+j+k+l+m+n+o
-                                                                    file.write(word)
+                                                                    file.write(word+"\n")
         print "DONE"
+        file.close()
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "16":
@@ -234,8 +246,9 @@ elif lenght == "16":
                                                                 for o in lc_letters:
                                                                     for p in lc_letters:
                                                                         word = a+b+c+d+e+f+g+h+i+j+k+l+m+n+o+p
-                                                                        file.write(word)
+                                                                        file.write(word+"\n")
         print "DONE"
+        file.close()
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 else:
