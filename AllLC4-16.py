@@ -5,7 +5,7 @@ lc_letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q
 lenght = raw_input("Lenght : ")
 
 if lenght == "4":
-    file = open("DIC_lcletters_4","w")
+    file = open("DIC_lcletters_4.txt","w")
     try:
         for a in lc_letters:
             for b in lc_letters:
@@ -17,7 +17,7 @@ if lenght == "4":
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "5":
-    file = open("DIC_lcletters_5","w")
+    file = open("DIC_lcletters_5.txt","w")
     try:
         for a in lc_letters:
             for b in lc_letters:
@@ -30,7 +30,7 @@ elif lenght == "5":
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "6":
-    file = open("DIC_lcletters_6","w")
+    file = open("DIC_lcletters_6.txt","w")
     try:
         for a in lc_letters:
             for b in lc_letters:
@@ -44,7 +44,7 @@ elif lenght == "6":
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "7":
-    file = open("DIC_lcletters_7","w")
+    file = open("DIC_lcletters_7.txt","w")
     try:
         for a in lc_letters:
             for b in lc_letters:
@@ -59,7 +59,7 @@ elif lenght == "7":
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "8":
-    file = open("DIC_lcletters_8","w")
+    file = open("DIC_lcletters_8.txt","w")
     try:
         for a in lc_letters:
             for b in lc_letters:
@@ -75,7 +75,7 @@ elif lenght == "8":
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "9":
-    file = open("DIC_lcletters_9","w")
+    file = open("DIC_lcletters_9.txt","w")
     try:
         for a in lc_letters:
             for b in lc_letters:
@@ -92,7 +92,7 @@ elif lenght == "9":
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "10":
-    file = open("DIC_lcletters_10","w")
+    file = open("DIC_lcletters_10.txt","w")
     try:
         for a in lc_letters:
             for b in lc_letters:
@@ -110,7 +110,7 @@ elif lenght == "10":
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "11":
-    file = open("DIC_lcletters_11","w")
+    file = open("DIC_lcletters_11.txt","w")
     try:
         for a in lc_letters:
             for b in lc_letters:
@@ -129,7 +129,7 @@ elif lenght == "11":
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "12":
-    file = open("DIC_lcletters_12","w")
+    file = open("DIC_lcletters_12.txt","w")
     try:
         for a in lc_letters:
             for b in lc_letters:
@@ -149,7 +149,7 @@ elif lenght == "12":
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "13":
-    file = open("DIC_lcletters_13","w")
+    file = open("DIC_lcletters_13.txt","w")
     try:
         for a in lc_letters:
             for b in lc_letters:
@@ -170,7 +170,7 @@ elif lenght == "13":
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "14":
-    file = open("DIC_lcletters_14","w")
+    file = open("DIC_lcletters_14.txt","w")
     try:
         for a in lc_letters:
             for b in lc_letters:
@@ -192,7 +192,7 @@ elif lenght == "14":
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "15":
-    file = open("DIC_lcletters_15","w")
+    file = open("DIC_lcletters_15.txt","w")
     try:
         for a in lc_letters:
             for b in lc_letters:
@@ -215,7 +215,7 @@ elif lenght == "15":
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
 elif lenght == "16":
-    file = open("DIC_lcletters_16","w")
+    file = open("DIC_lcletters_16.txt.txt","w")
     try:
         for a in lc_letters:
             for b in lc_letters:
