@@ -4,7 +4,7 @@ lc_letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q
 
 lenght = raw_input("Lenght : ")
 
-if lenght == 4:
+if lenght == "4":
     file = open("DIC_lcletters_4","w")
     try:
         for a in lc_letters:
@@ -16,7 +16,7 @@ if lenght == 4:
         print "DONE"
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
-elif lenght == 5:
+elif lenght == "5":
     file = open("DIC_lcletters_5","w")
     try:
         for a in lc_letters:
@@ -29,7 +29,7 @@ elif lenght == 5:
         print "DONE"
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
-elif lenght == 6:
+elif lenght == "6":
     file = open("DIC_lcletters_7","w")
     try:
         for a in lc_letters:
@@ -43,7 +43,7 @@ elif lenght == 6:
         print "DONE"
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
-elif lenght == 7:
+elif lenght == "7":
     file = open("DIC_lcletters_7","w")
     try:
         for a in lc_letters:
@@ -58,7 +58,7 @@ elif lenght == 7:
         print "DONE"
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
-elif lenght == 8:
+elif lenght == "8":
     file = open("DIC_lcletters_8","w")
     try:
         for a in lc_letters:
@@ -74,7 +74,7 @@ elif lenght == 8:
         print "DONE"
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
-elif lenght == 9:
+elif lenght == "9":
     file = open("DIC_lcletters_9","w")
     try:
         for a in lc_letters:
@@ -91,7 +91,7 @@ elif lenght == 9:
         print "DONE"
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
-elif lenght == 10:
+elif lenght == "10":
     file = open("DIC_lcletters_10","w")
     try:
         for a in lc_letters:
@@ -109,7 +109,7 @@ elif lenght == 10:
         print "DONE"
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
-elif lenght == 11:
+elif lenght == "11":
     file = open("DIC_lcletters_11","w")
     try:
         for a in lc_letters:
@@ -128,7 +128,7 @@ elif lenght == 11:
         print "DONE"
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
-elif lenght == 12:
+elif lenght == "12":
     file = open("DIC_lcletters_12","w")
     try:
         for a in lc_letters:
@@ -148,7 +148,7 @@ elif lenght == 12:
         print "DONE"
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
-elif lenght == 13:
+elif lenght == "13":
     file = open("DIC_lcletters_13","w")
     try:
         for a in lc_letters:
@@ -169,7 +169,7 @@ elif lenght == 13:
         print "DONE"
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
-elif lenght == 14:
+elif lenght == "14":
     file = open("DIC_lcletters_14","w")
     try:
         for a in lc_letters:
@@ -191,7 +191,7 @@ elif lenght == 14:
         print "DONE"
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
-elif lenght == 15:
+elif lenght == "15":
     file = open("DIC_lcletters_15","w")
     try:
         for a in lc_letters:
@@ -214,7 +214,7 @@ elif lenght == 15:
         print "DONE"
     except KeyboardInterrupt:
         print "KeyboardInterrupt"
-elif lenght == 16:
+elif lenght == "16":
     file = open("DIC_lcletters_16","w")
     try:
         for a in lc_letters:
